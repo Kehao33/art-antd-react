@@ -1,6 +1,6 @@
 # art-antd-react
 
-### 基于 [Ant Design](https://ant-design.gitee.io/components/overview-cn/) 开发的组件，旨在为了更快更高效更快乐的做一个前端开发艺术家 1E8B1E36.png
+### 基于 [Ant Design](https://ant-design.gitee.io/components/overview-cn/) 开发的组件，旨在为了更快更高效更快乐的做一个前端开发艺术家
 
 ### Description
 
@@ -121,4 +121,6 @@ const Demo1 = () => {
 export default Demo1;
 ```
 
-learn more please view [art-antd-react of gitee](https://quankehao.gitee.io/art-antd-react)
+### 说明
+
+由于 github 的静态页面布置 需要放在 docs 部署才能生效（或者 root 下放一个 index.(md|html) 文件，因此在 yarn docs:build 后需要将 docs-dist 的文件拷贝到 docs/ 文件夹中(这个后边再看看咋搞)
