@@ -24,8 +24,9 @@ Gitee：
 
 - [art-antd-react repository 地址](https://gitee.com/quankehao/art-antd-react/pages)
 
-github: 
-- [art-antd-react gitee 官网] 待部署
+github:
+
+- [art-antd-react gitee 官网](https://kehao33.github.io/docs-dist/)
 
 - [art-antd-react GitHub repository 地址](https://github.com/Kehao33/art-antd-react)
 
