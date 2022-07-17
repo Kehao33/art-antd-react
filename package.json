@@ -1,0 +1,71 @@
+{
+  "name": "art-antd-react",
+  "version": "1.1.0",
+  "main": "normalize.css",
+  "description": "a package base antd(react)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kehao33/art-antd-react"
+  },
+  "keywords": [
+    "antd",
+    "react",
+    "component",
+    "config",
+    "FormGenerator",
+    "Detail"
+  ],
+  "author": "jakequc",
+  "homepage": "https://quankehao.gitee.io/",
+  "scripts": {
+    "start": "dumi dev",
+    "docs:build": "dumi build",
+    "docs:deploy": "gh-pages -d docs-dist",
+    "build": "father-build",
+    "deploy": "npm run docs:build && npm run docs:deploy",
+    "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage",
+    "prepublishOnly": "npm run build"
+  },
+  "module": "es/index.js",
+  "typings": "es/index.d.ts",
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "dependencies": {
+    "antd": "^4.21.4",
+    "eslint": "^8.19.0",
+    "react": "^16.12.0 || ^17.0.0",
+    "sourcemap-codec": "^1.4.8"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.15.1",
+    "@testing-library/react": "^12.1.2",
+    "@types/jest": "^27.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.30.3",
+    "@typescript-eslint/parser": "^5.30.3",
+    "@umijs/fabric": "^2.8.1",
+    "@umijs/preset-react": "^2.1.4",
+    "@umijs/test": "^3.0.5",
+    "dumi": "^1.1.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "father-build": "^1.17.2",
+    "gh-pages": "^3.0.0",
+    "lint-staged": "^10.0.7",
+    "prettier": "^2.2.1",
+    "yorkie": "^2.0.0"
+  }
+}
