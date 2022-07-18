@@ -16,7 +16,7 @@
     "Detail"
   ],
   "author": "jakequc",
-  "homepage": "https://quankehao.gitee.io/",
+  "homepage": "https://quankehao.gitee.io/art-antd-react/",
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",
@@ -34,7 +34,7 @@
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
-    "*.{js,jsx,less,md,json}": [
+    "*.{js,jsx,less,json}": [
       "prettier --write"
     ],
     "*.ts?(x)": [
