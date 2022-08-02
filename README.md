@@ -29,7 +29,7 @@ Gitee：
 
 github:
 
-- [art-antd-react GitHub 官网](https://kehao33.github.io/docs-dist/)
+- [art-antd-react GitHub 官网](https://kehao33.github.io/art-antd-react/)
 
 - [art-antd-react GitHub repository 地址](https://github.com/Kehao33/art-antd-react)
 

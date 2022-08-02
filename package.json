@@ -17,7 +17,7 @@
     "Detail"
   ],
   "author": "jakequc",
-  "homepage": "https://quankehao.gitee.io/art-antd-react/",
+  "homepage": "https://kehao33.github.io/art-antd-react/",
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",
