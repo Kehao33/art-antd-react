@@ -1,7 +1,6 @@
 import { Form, InputProps } from 'antd';
 import React from 'react';
-import { FormGenerator } from '..';
-import { FormItemConfig, RenderType } from '../../FormItemsBuilder';
+import { FormItemConfig, RenderType, FormGenerator } from 'art-antd-react';
 
 const Demo1 = () => {
   const [form] = Form.useForm();

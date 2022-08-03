@@ -1,6 +1,6 @@
 import { Button, Col, Form, InputNumberProps, InputProps, Row, SelectProps } from 'antd';
 import React from 'react';
-import { FormItemsBuilder, FormItemConfig, RenderType } from '..';
+import { FormItemsBuilder, FormItemConfig, RenderType } from 'art-antd-react';
 
 const Demo1 = () => {
   const [form] = Form.useForm();

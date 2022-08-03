@@ -4,21 +4,23 @@
 
 ### Description
 
-当前可供用的组件
+#### 当前可供用的组件
 
+- DetailPresent 详情呈现，配置化展示详情信息
 - FormItemsBuilder 表单项构建器，快速生成表单项
-- FormGenerator 表单生成器，在表单项构建构造器的基础上封装了 提交，重置，折叠等功能
 - DetailPresent 详情呈现，快速的展示出想展示的信息
-- antd 的所有组件均可从 本组件中导出
+- FormGenerator 表单生成器，在表单项构建构造器的基础上封装了 提交，重置，折叠等功能
+- antd 的所有组件均可从 本组件中导出(这意味着用 antd demo 的时候只需要安装这个包即可，哈哈 )
 
-#### 放眼未来
+#### 提供的 hooks
 
-- 列表配置页 hooks (支持搜索，table 展示，自动 loading)
-- 表单弹框 hooks （提交时 loading，提交后请求数据,成功则关闭 modal，否则弹框仍然打开）
+- useConfigListPage 列表配置页 hooks (支持搜索，table 展示，自动 loading)
+- useFormModal 表单弹框 hooks （提交时 loading，提交后请求数据, 成功则关闭 modal，否则弹框仍然打开）
+- useRequest 请求时 自动 loading，error 监控，格式化请求到的数据，成功提示
 
 #### 官网 & 仓库地址
 
-###### 【官网或许暂时不能访问，请直接看  Getting Started 的 demo ; 从 1.0.0 版本起到 2.0.0(作者承诺),升级该 library 都属于无痛升级】
+> 如果官网暂时不能访问，直接看 Started 的 demo 搭建应用，hooks 可以 clone 本仓库后本地看demo ^_&
 
 Gitee：
 
@@ -28,7 +30,7 @@ Gitee：
 
 github:
 
-- [art-antd-react GitHub 官网](https://kehao33.github.io/docs-dist/)
+- [art-antd-react GitHub 官网](https://kehao33.github.io/art-antd-react/)
 
 - [art-antd-react GitHub repository 地址](https://github.com/Kehao33/art-antd-react)
 
@@ -38,8 +40,6 @@ github:
 npm i art-antd-react
 # or
 yarn add art-antd-react
-# yet
-pnpm i art-antd-react
 ```
 
 # FormItemsBuilder 表单项构建器
@@ -162,24 +162,24 @@ export default Demo1;
 | 参数 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
 | colProps | 同 antd 的 [ColProps](https://ant-design.gitee.io/components/grid-cn/#Col) | ColProps | {} |
-| formItemsConfig | 定义每个 Form.Item 和其 Child 的配置，详情见下 | FormItemConfig[]|-|
+| formItemsConfig | 定义每个 Form.Item 和其 Child 的配置，详情见下 | FormItemConfig[] | - |
 
 ### FormItemConfig API
 
 | 参数 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
-| key | 唯一标识，用来做 map 时的 key，不存在则 name, name 不存在时则为 index | React.Key|-|
-| formItemProps | 同 antd 的 [Form.Item API](https://ant-design.gitee.io/components/form-cn/#Form.Item) | FormItemProps|-|
-| itemColProps | 同 antd 的 [ColProps](https://ant-design.gitee.io/components/grid-cn/#Col) , 定义当前的 col 布局 | ColProps|-|
-| renderType | 标识 Form.Item 的 Children 应该为 哪个组件 | [见如下 RenderType 声明](/components/form-items-builder#rendertype)|-|
-| formItemChildProps | 每一项对应的 Form.Item 的 children 的 Props，如 Input 的 onChange 等属性|-| - |
-| formItemChildProps | renderType 为 CustomItemChildren 的时候 渲染的 Form.Item 的 children 元素 | React.ReactElement|-|
-| itemTitle | 定义当前项的 title | React.ReactNode|-|
+| key | 唯一标识，用来做 map 时的 key，不存在则 name, name 不存在时则为 index | React.Key | - |
+| formItemProps | 同 antd 的 [Form.Item API](https://ant-design.gitee.io/components/form-cn/#Form.Item) | FormItemProps | - |
+| itemColProps | 同 antd 的 [ColProps](https://ant-design.gitee.io/components/grid-cn/#Col) , 定义当前的 col 布局 | ColProps | - |
+| renderType | 标识 Form.Item 的 Children 应该为 哪个组件 | [见如下 RenderType 声明](/components/form-items-builder#rendertype) | - |
+| formItemChildProps | 每一项对应的 Form.Item 的 children 的 Props，如 Input 的 onChange 等属性 | - | - |
+| formItemChildProps | renderType 为 CustomItemChildren 的时候 渲染的 Form.Item 的 children 元素 | React.ReactElement | - |
+| itemTitle | 定义当前项的 title | React.ReactNode | - |
 
 #### RenderType
 
 ```typescript
-// 不使用 枚举 是因为 提示不够智能 (后边会优化，但是保证不会破坏功能)
+// 不使用 枚举 是因为 提示不够智能 202E0D19.png
 const RenderType = {
   /*
    对应 渲染 antd 的 Input 组件, formItemChildProps 对应为 InputProps
@@ -362,11 +362,10 @@ export default Demo1;
 
 | 参数 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
-| detail | 要展示的详情对象 | Record<string,any>|-|
-| keyMapLabel | 根据 key 来映射 出 label，这个配置决定了显示的顺序 | Record<string,React.ReactNode>|-|
-| keyMapItemProps | 映射 单独项的布局 value 的类型为 [DescriptionItemProps](https://ant-design.gitee.io/components/descriptions-cn/#DescriptionItem)|-| - |
-| placeholder | 空值的占位符 | React.ReactNode|-|
-
+| detail | 要展示的详情对象 | Record<string,any> | - |
+| keyMapLabel | 根据 key 来映射 出 label，这个配置决定了显示的顺序 | Record<string,React.ReactNode> | - |
+| keyMapItemProps | 映射 单独项的布局 value 的类型为 [DescriptionItemProps](https://ant-design.gitee.io/components/descriptions-cn/#DescriptionItem) | `Record<keyof detail,DescriptionItemProps >` | - |
+| placeholder | 空值的占位符 | React.ReactNode | - |
 
 # FormGenerator 表单生成器
 
@@ -551,22 +550,19 @@ export default Demo2;
 ## FormGenerator API
 
 | 参数 | 说明 | 类型 | 默认值 |
-| --- |- | --- | --- |
-| colProps | 定义每一列的布局,同 antd [ColProps](https://ant-design.gitee.io/components/grid-cn/#Col) | ColProps|-|
-| rowProps | 定义行的布局, 同 antd [RowProps](https://ant-design.gitee.io/components/grid-cn/#Row) | RowProps|-|
+| --- | --- | --- | --- |
+| colProps | 定义每一列的布局,同 antd [ColProps](https://ant-design.gitee.io/components/grid-cn/#Col) | ColProps | - |
+| rowProps | 定义行的布局, 同 antd [RowProps](https://ant-design.gitee.io/components/grid-cn/#Row) | RowProps | - |
 | showExpend | 是否展示收缩功能 | boolean | true |
 | showSubmit | 是否展示提交功能 | boolean | true |
-| showRest | 是否展示重置功能 | boolean | true |  | actionBar | 自定义操作功能 | React.ReactNode|-|
-| formItemmsConfig | formItems 的配置,查看[FormItemsBuilder API]() | FormItemConfig[]|-|
+| showRest | 是否展示重置功能 | boolean | true |  | actionBar | 自定义操作功能 | React.ReactNode | - |
+| formItemmsConfig | formItems 的配置,查看[FormItemsBuilder API]() | FormItemConfig[] | - |
 | foldNumber | 收起的时候展示多少个表单项 | number | 2 |
 | flodNode | 收起的描述 | React.ReactNode | '收起' |
 | unfoldNode | 展开的描述 | React.ReactNode | '展开' |
 | restNode | 重置的描述 | React.ReactNode | '重置' |
 | submitNode | 提交的描述 | React.ReactNode | '提交' |
 | fold | 是否收缩 | boolean | false |
-| onRest | 点击充值后的操作 | ()=> void|-|
+| onRest | 点击充值后的操作 | ()=> void | - |
 
 说明，FormGerator 的所有 API/props 继承自 antd [Form](https://ant-design.gitee.io/components/form-cn/), 故除以下的 props 外，其他的 Form props 均可直接透传给 FormGenrator props
-### 说明
-
-由于 github 的静态页面布置 需要放在 docs 部署才能生效（或者 root 下放一个 index.(md|html) 文件，因此在 yarn docs:build 后需要将 docs-dist 的文件拷贝到 docs/ 文件夹中(这个后边再看看咋搞)

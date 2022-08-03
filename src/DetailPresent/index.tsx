@@ -34,7 +34,7 @@ export const DetailPresent = <D extends Record<string, any> = Record<string, any
 
         return (
           keyMapLabel[key] && (
-            <Descriptions.Item {...itemConfig}>
+            <Descriptions.Item key={key} {...itemConfig}>
               <>{detail[key] ?? placeholder}</>
             </Descriptions.Item>
           )

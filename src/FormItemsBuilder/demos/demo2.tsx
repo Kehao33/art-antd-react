@@ -1,7 +1,7 @@
 import { Button, Card, Col, Form, Row, SelectProps, TimeRangePickerProps } from 'antd';
 import { SliderBaseProps } from 'antd/lib/slider';
 import React from 'react';
-import { FormItemsBuilder, FormItemConfig, RenderType } from '..';
+import { FormItemsBuilder, FormItemConfig, RenderType } from 'art-antd-react';
 
 const Demo2 = () => {
   const [form] = Form.useForm();

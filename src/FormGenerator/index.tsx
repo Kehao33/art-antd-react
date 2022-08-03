@@ -1,7 +1,6 @@
-import { ColProps, Form, RowProps, Row, FormProps, Col, Button, Space } from 'antd';
-
+import { ColProps, Form, RowProps, Row, FormProps, Col, ButtonProps, Button, Space } from 'antd';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import  { FormItemsBuilder, FormItemConfig } from '../FormItemsBuilder';
+import { FormItemsBuilder, FormItemConfig } from '../FormItemsBuilder';
 
 export interface FormGeneratorProps extends Omit<FormProps, 'onReset'> {
   // 操作栏的的 col 布局， 和 antd 的 Col API 相同，优先级高于 colProps
@@ -34,6 +33,10 @@ export interface FormGeneratorProps extends Omit<FormProps, 'onReset'> {
   unfoldNode?: React.ReactNode;
   // 自定义操作内容
   actionBar?: React.ReactNode;
+  // 提交按钮的 props
+  submitBtnProps?: ButtonProps;
+  // 重置按钮的 props
+  resetBtnProps?: ButtonProps;
 }
 
 export type FormStoreValue = Record<string, unknown>;
@@ -56,6 +59,8 @@ export const FormGenerator: React.FC<FormGeneratorProps> = ({
   fold = false,
   onReset,
   onValuesChange,
+  submitBtnProps,
+  resetBtnProps,
   ...restFormConfig
 }) => {
   const [formInstance] = Form.useForm(form);
@@ -99,12 +104,12 @@ export const FormGenerator: React.FC<FormGeneratorProps> = ({
             ((showExpend || showRest || showSubmit) && (
               <Space>
                 {showSubmit && (
-                  <Button type="primary" htmlType="submit">
+                  <Button type="primary" htmlType="submit" {...(submitBtnProps || {})}>
                     {submitNode}
                   </Button>
                 )}
                 {showRest && (
-                  <Button danger type="primary" onClick={handleReset}>
+                  <Button onClick={handleReset} {...(resetBtnProps || {})}>
                     {restNode}
                   </Button>
                 )}

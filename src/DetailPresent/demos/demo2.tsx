@@ -1,5 +1,5 @@
 import React from 'react';
-import { DetailPresent } from '..';
+import { DetailPresent } from 'art-antd-react';
 
 const Demo1 = () => {
   const responseData = {
