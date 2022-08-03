@@ -4,12 +4,13 @@
 
 ### Description
 
-当前可供用的组件
+#### 当前可供用的组件
 
+- DetailPresent 详情呈现，配置化展示详情信息
 - FormItemsBuilder 表单项构建器，快速生成表单项
-- FormGenerator 表单生成器，在表单项构建构造器的基础上封装了 提交，重置，折叠等功能
 - DetailPresent 详情呈现，快速的展示出想展示的信息
-- antd 的所有组件均可从 本组件中导出
+- FormGenerator 表单生成器，在表单项构建构造器的基础上封装了 提交，重置，折叠等功能
+- antd 的所有组件均可从 本组件中导出(这意味着用 antd demo 的时候只需要安装这个包即可，哈哈 )
 
 #### 提供的 hooks
 
@@ -19,7 +20,7 @@
 
 #### 官网 & 仓库地址
 
-###### 【官网暂时不能访问，直接看 Started 的 demo 搭建应用; 从 1.0.0 版本起到 2.0.0(作者承诺),升级该 library 都属于无痛升级】
+> 如果官网暂时不能访问，直接看 Started 的 demo 搭建应用，hooks 可以 clone 本仓库后本地看demo ^_&
 
 Gitee：
 
@@ -549,7 +550,7 @@ export default Demo2;
 ## FormGenerator API
 
 | 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- |
 | colProps | 定义每一列的布局,同 antd [ColProps](https://ant-design.gitee.io/components/grid-cn/#Col) | ColProps | - |
 | rowProps | 定义行的布局, 同 antd [RowProps](https://ant-design.gitee.io/components/grid-cn/#Row) | RowProps | - |
 | showExpend | 是否展示收缩功能 | boolean | true |
@@ -565,7 +566,3 @@ export default Demo2;
 | onRest | 点击充值后的操作 | ()=> void | - |
 
 说明，FormGerator 的所有 API/props 继承自 antd [Form](https://ant-design.gitee.io/components/form-cn/), 故除以下的 props 外，其他的 Form props 均可直接透传给 FormGenrator props
-
-### 说明
-
-由于 github 的静态页面布置 需要放在 docs 部署才能生效（或者 root 下放一个 index.(md|html) 文件，因此在 yarn docs:build 后需要将 docs-dist 的文件拷贝到 docs/ 文件夹中(这个后边再看看咋搞)
