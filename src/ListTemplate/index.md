@@ -1,6 +1,6 @@
 ---
 nav:
-  title: ListTemplate
+  title: components
   path: /components
 ---
 

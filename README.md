@@ -1,8 +1,17 @@
 # art-antd-react
 
-### 基于 [Ant Design](https://ant-design.gitee.io/components/overview-cn/) 开发的组件，旨在为了更快更高效更快乐的做一个前端开发艺术家
+### 基于 [Ant Design](https://ant-design.gitee.io/components/overview-cn/) 开发的配置化组件，旨在通过配置化开发、做更快更高效更快乐的做一个前端开发艺术家
+
+何时使用该组件库：
+- 配置化开发表单
+- 配置化展示详情信息
+- 通过 hooks 来开发模板页面
+- 通过 hooks 来配置化表单弹框
+- useRequest 请求数据自动 loading、处理 error、format 返回数据、手动自动请求数据
+- 快速使用 antd 搭建一个 react demo（无需配置），开箱即用 antd 组件
 
 ### Description
+从1.1.0 到 以后的版本，antd 只要是无痛升级，本 library 也是无痛升级
 
 #### 当前可供用的组件
 

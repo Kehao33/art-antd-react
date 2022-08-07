@@ -1,6 +1,6 @@
 ---
 nav:
-  title: DetailPresent
+  title: components
   path: /components
 ---
 
