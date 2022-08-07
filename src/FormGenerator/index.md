@@ -1,6 +1,6 @@
 ---
 nav:
-  title: FormGenerator
+  title: components
   path: /components
 ---
 

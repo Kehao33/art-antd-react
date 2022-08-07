@@ -1,6 +1,6 @@
 ---
 nav:
-  title: FormItemsBuilder
+  title: components
   path: /components
 ---
 
