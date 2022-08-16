@@ -8,7 +8,7 @@ import { useRequest } from 'art-antd-react';
 import { getData, MockData } from './mock';
 
 const RequestHookDemo = () => {
-  const { data, loading, lazyService } = useRequest<MockData>(getData, {
+  const { data, loading, lazyService } = useRequest<MockData[]>(getData, {
     lazy: true, // lazy 为 true 的时候需要手动去调用 lazyService(xx)
     onError(e: Error) {
       message.error(e?.message || '请求出错');
