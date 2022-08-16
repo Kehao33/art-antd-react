@@ -86,8 +86,8 @@ const Demo1 = () => {
 
   return (
     <ListTemplate
-      // ListTemplate 的 属性继承于 Space 所以 size 就是 来自于继承的 SpaceProps
-      size={16}
+      // space 的配置 
+      spaceProps={{ size: 16 }}
       // table 的配置
       tableProps={{
         loading,
