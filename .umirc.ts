@@ -4,10 +4,9 @@ export default defineConfig({
   title: 'art-antd-react',
   favicon: '/icons/logo.ico',
   logo: '/icons/logo.png',
-  hash: true,
   base: '/art-antd-react/',
   publicPath: '/art-antd-react/',
-  outputPath: 'dist',
+  outputPath: 'docs-dist',
   webpack5: {},
   dynamicImport: {},
   extraBabelPlugins: [
