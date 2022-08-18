@@ -4,7 +4,7 @@ nav:
   path: /components
 ---
 
-## FormItemsBuilder 表单项构建器
+## FormItemsBuilder 表单项构建
 
 ## 何时使用
 

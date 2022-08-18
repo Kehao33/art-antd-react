@@ -2,8 +2,8 @@ import { defineConfig } from 'dumi';
 
 export default defineConfig({
   title: 'art-antd-react',
-  favicon: '/icons/logo.ico',
-  logo: '/icons/logo.png',
+  favicon: '/logo.ico',
+  logo: '/logo.png',
   base: '/art-antd-react/',
   publicPath: '/art-antd-react/',
   outputPath: 'docs-dist',
