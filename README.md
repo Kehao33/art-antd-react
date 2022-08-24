@@ -3,6 +3,7 @@
 ### 基于 [Ant Design](https://ant-design.gitee.io/components/overview-cn/) 开发的配置化组件，旨在通过配置化开发、做更快更高效更快乐的做一个前端开发艺术家
 
 何时使用该组件库：
+
 - 配置化开发表单
 - 配置化展示详情信息
 - 通过 hooks 来开发模板页面
@@ -11,7 +12,8 @@
 - 快速使用 antd 搭建一个 react demo（无需配置），开箱即用 antd 组件
 
 ### Description
-从1.1.0 到 以后的版本，antd 只要是无痛升级，本 library 也是无痛升级
+
+从 1.1.0 到 以后的版本，antd 只要是无痛升级，本 library 也是无痛升级
 
 #### 当前可供用的组件
 
@@ -29,7 +31,7 @@
 
 #### 官网 & 仓库地址
 
-> 如果官网暂时不能访问，直接看 Started 的 demo 搭建应用，hooks 可以 clone 本仓库后本地看demo ^_&
+> 如果官网暂时不能访问，直接看 Started 的 demo 搭建应用，hooks 可以 clone 本仓库后本地看 demo ^\_&
 
 Gitee：
 
@@ -49,6 +51,11 @@ github:
 npm i art-antd-react
 # or
 yarn add art-antd-react
+
+# 在入口引入以下文件(这是antd的默认主题样式，如果要引入其他主题样式可以在项目中按照 https://ant-design.gitee.io/docs/react/use-with-create-react-app-cn 覆盖即可) 
+# 当样式丢失的时候 引入如下样式
+import "art-antd-react/dist/esm/styles/defaultAntdCss.css"
+
 ```
 
 # FormItemsBuilder 表单项构建器

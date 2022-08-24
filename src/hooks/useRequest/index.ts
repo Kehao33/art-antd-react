@@ -6,17 +6,17 @@ export interface OptionConfig<Params, Res> {
   lazy?: boolean;
   defaulParams?: Params;
   onSuccess?: (data?: Res) => void;
-  onError?: (e?: Error) => void;
+  onError?: (e: any) => void;
   formaResult?: (res: any) => Res;
 }
 
-export const useRequest = <Params, Res>(
+export const useRequest = <Res = any, Params = any>(
   request: RequestService<Params, Res>,
   config?: OptionConfig<Params, Res>,
 ) => {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState<Res>();
-  const [error, setError] = useState<Error>();
+  const [error, setError] = useState<any>();
 
   const { lazy, defaulParams, onSuccess, onError, formaResult } = config || {};
 

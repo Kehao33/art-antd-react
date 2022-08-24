@@ -6,3 +6,5 @@ export * from './hooks/useRequest';
 export * from './hooks/useFormModal';
 export * from './hooks/useConfigListPage';
 export * from 'antd';
+import "./styles/defaultAntdCss.css";
+
