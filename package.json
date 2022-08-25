@@ -6,7 +6,7 @@
     "type": "github",
     "url": "https://github.com/Kehao33/art-antd-react"
   },
-  "version": "1.8.5",
+  "version": "1.8.6",
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",
