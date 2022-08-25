@@ -6,7 +6,7 @@ nav:
 
 ## MutModal 列表模板
 
-基于 ant deisgn Modal 进行二次封装的组件，意在解决表单 modal 重复的进行 confirm loading 的情况
+基于 ant deisgn Modal 进行二次封装的组件，意在解决表单 modal 重复的进行 confirm loading 的情况, 通常 MutModal 的 children 期望是一个 form 表单
 
 ## 何时使用
 
@@ -19,7 +19,7 @@ nav:
 <code src="../demos/MutModalDemo1.tsx"  title="简单的使用,展示可能会报错，请直接copy代码在您的项目中食用"> 
 
 ## API
-说明，MutModal 是基于 ant design 的 Modal 进行二次封装的，所以除了如下 API 外，antd design 的 Modal 均可以透传给 MutModal
+说明，MutModal 是基于 ant design 的 Modal 进行二次封装的，所以除了如下 API 外，antd design 的 [Modal API](https://ant-design.gitee.io/components/modal-cn/#API) 均可以透传给 MutModal
 
 
 | 参数 | 说明 | 类型 | 默认值 |

@@ -15,7 +15,7 @@
 #### 当前可供用的组件
 
 - DetailPresent 详情呈现，配置化展示详情信息
-- MutModal 常见的 Form 表单操作，自动处理 loading， loading 结束后才关闭modal
+- MutModal 常见的 Modal 里操作 Form 表单操作，自动处理 loading， loading 结束后才关闭 modal
 - FormItemsBuilder 表单项构建器，快速生成表单项
 - DetailPresent 详情呈现，快速的展示出想展示的信息
 - FormGenerator 表单生成器，在表单项构建构造器的基础上封装了 提交，重置，折叠等功能
