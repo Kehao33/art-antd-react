@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormInstance, message, Modal, ModalProps, } from 'antd';
+import { FormInstance, message, Modal, ModalProps } from 'antd';
 import { RequestService, useRequest } from '../hooks/useRequest';
 
 interface FormModalConfig<Value, Res> extends Omit<ModalProps, 'onError' | 'onOk'> {
@@ -8,7 +8,7 @@ interface FormModalConfig<Value, Res> extends Omit<ModalProps, 'onError' | 'onOk
   onSuccess?: (data?: Res) => void;
   onError?: (e?: Error) => void;
   onCancel?: () => void;
-  form: FormInstance
+  form: FormInstance;
 }
 
 export const MutModal = <Value, Res>({
@@ -21,7 +21,6 @@ export const MutModal = <Value, Res>({
   children,
   ...restModalProps
 }: FormModalConfig<Value, Res>) => {
-
   const { lazyService, loading } = useRequest(serviceFn, {
     lazy: true,
     onSuccess(data) {
@@ -42,20 +41,23 @@ export const MutModal = <Value, Res>({
     },
   });
 
-
   const handleCancel = () => {
     onCancel?.();
   };
 
-  return <Modal
-    onCancel={handleCancel}
-    onOk={() => form.validateFields().then(res => {
-      console.log("result: ", res)
-      lazyService(formatSubmitValue ? formatSubmitValue(res) : res);
-    })}
-    confirmLoading={loading}
-    {...restModalProps}
-  >
-    {children}
-  </Modal>
+  return (
+    <Modal
+      onCancel={handleCancel}
+      onOk={() =>
+        form.validateFields().then((res) => {
+          console.log('result: ', res);
+          lazyService(formatSubmitValue ? formatSubmitValue(res) : res);
+        })
+      }
+      confirmLoading={loading}
+      {...restModalProps}
+    >
+      {children}
+    </Modal>
+  );
 };

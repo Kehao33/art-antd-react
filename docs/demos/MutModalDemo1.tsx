@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Button, Form, message, } from 'antd';
+import { Button, Form, message } from 'antd';
 import { FormItemConfig, FormGenerator, RenderType, MutModal } from 'art-antd-react';
 //  安裝了 art-antd-react 以后 antd 直接导出的 类型或组件 可以直接从 art-antd-react 中导出
 // import { FormItemConfig, RenderType, useFormModal, Button, message } from 'art-antd-react';
 
-const Demo1 = () => {
+const MutModalDemo1 = () => {
   const [visible, setVisible] = useState(false);
   const [form] = Form.useForm();
 
@@ -83,7 +83,7 @@ const Demo1 = () => {
       </Button>
       <MutModal
         visible={visible} // 决定了是否出现弹框
-        title='编辑个人信息'
+        title="编辑个人信息"
         form={form}
         serviceFn={() => {
           return new Promise((resolve) => {
@@ -93,35 +93,26 @@ const Demo1 = () => {
           });
         }}
         formatSubmitValue={(formValue: Record<string, any>) => {
-          console.log("formateValue", formValue);
+          console.log('formateValue', formValue);
           return {
             ...formValue,
-            appendKey: "appendValue"
-          }
+            appendKey: 'appendValue',
+          };
         }}
-        onSuccess={
-          () => {
-            message.success('操作成功');
-            setVisible(false);
-            console.log('请求之后你可以做任何行为操作');
-          }
-        }
-        onCancel={
-          () => {
-            message.success('取消编辑');
-            setVisible(false);
-          }
-        }
-
+        onSuccess={() => {
+          message.success('操作成功');
+          setVisible(false);
+          console.log('请求之后你可以做任何行为操作');
+        }}
+        onCancel={() => {
+          message.success('取消编辑');
+          setVisible(false);
+        }}
       >
-        <FormGenerator
-          form={form}
-          colProps={{ span: 24 }}
-          formItemsConfig={formItemsConfig}
-        />
+        <FormGenerator form={form} colProps={{ span: 24 }} formItemsConfig={formItemsConfig} />
       </MutModal>
     </>
   );
 };
 
-export default Demo1;
+export default MutModalDemo1;

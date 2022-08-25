@@ -10,8 +10,5 @@
     "skipLibCheck": true,
     "declaration": true
   },
-  "paths": {
-    "art-antd-react": ["./src/index.ts"],
-  
-  }
+  "paths": {}
 }

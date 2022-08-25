@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button, message } from 'antd';
 import { useRequest } from 'art-antd-react';
 //  安裝了 art-antd-react 以后 antd 直接导出的 类型或组件 可以直接从 art-antd-react 中导出

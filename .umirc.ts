@@ -46,6 +46,6 @@ export default defineConfig({
     },
   ],
   alias: {
-    'art-antd-react': require('path').resolve('src', 'index.ts'),
+    // 'art-antd-react': require('path').resolve('src', 'index.ts'),
   },
 });

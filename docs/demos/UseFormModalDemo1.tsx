@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, message } from 'antd';
+import { Button, Form, Input, message, Modal } from 'antd';
 import { FormItemConfig, RenderType, useFormModal } from 'art-antd-react';
 //  安裝了 art-antd-react 以后 antd 直接导出的 类型或组件 可以直接从 art-antd-react 中导出
 // import { FormItemConfig, RenderType, useFormModal, Button, message } from 'art-antd-react';
@@ -71,7 +71,7 @@ const Demo1 = () => {
     visible, // 决定了是否出现弹框
     rowProps: { gutter: 8 },
     colProps: { span: 24 },
-    formItemsConfig,
+    formItemsConfig: [],
     title: '编辑个人信息',
     serviceFn: () => {
       return new Promise((resolve) => {
@@ -102,6 +102,7 @@ const Demo1 = () => {
     <>
       <Button
         onClick={() => {
+          console.log(':formInstance: ', formInstance);
           formInstance.setFieldsValue({
             name: 'jakequc',
             age: 124,
@@ -111,7 +112,13 @@ const Demo1 = () => {
       >
         编辑信息
       </Button>
-      {formModal}
+      <Modal visible={visible}>
+        <Form>
+          <Form.Item name="name">
+            <Input />
+          </Form.Item>
+        </Form>
+      </Modal>
     </>
   );
 };

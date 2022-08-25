@@ -1,4 +1,3 @@
-import React from 'react';
 import { DetailPresent } from 'art-antd-react';
 
 const Demo1 = () => {

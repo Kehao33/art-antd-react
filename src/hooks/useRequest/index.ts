@@ -16,7 +16,7 @@ export const useRequest = <Res = any, Params = any>(
 ) => {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState<Res>();
-  const [error, setError] = useState<any>();
+  const [error, setError] = useState<Error>();
 
   const { lazy, defaulParams, onSuccess, onError, formaResult } = config || {};
 

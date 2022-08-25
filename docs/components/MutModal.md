@@ -6,7 +6,7 @@ nav:
 
 ## MutModal 列表模板
 
-基于 ant deisgn Modal 进行二次封装的组件，意在解决表单 modal 重复的进行 confirm loading 的情况, 通常 MutModal 的 children 期望是一个 form 表单
+基于 ant deisgn Modal 进行二次封装的组件，意在解决表单 modal 重复的进行 confirm loading 的情况
 
 ## 何时使用
 

@@ -98,7 +98,7 @@ const Demo1 = () => {
       rowKey: 'id',
       // 分页配置，不需要就不用配置，你懂的
       pagination: {
-        onChange(page, pageSize) {
+        onChange(page: number, pageSize: number) {
           console.log(`change pagination: pageNo = ${page}, pageSize = ${pageSize}`);
         },
       },
