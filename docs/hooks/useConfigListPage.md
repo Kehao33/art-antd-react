@@ -18,7 +18,7 @@ nav:
 
 ### 基本使用
 
-<code src="../../src/demos/UseConfigListPageDemo1.tsx"  title="使用demo">
+<code src="../demos/UseConfigListPageDemo1.tsx"  title="使用demo">
 
 ### Result 返回的结果
 

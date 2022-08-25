@@ -18,7 +18,7 @@ specifiers:
   yorkie: ^2.0.0
 
 dependencies:
-  antd: 4.22.5_react@18.2.0
+  antd: 4.22.7_react@18.2.0
   babel-plugin-import: 1.13.5
   react: 18.2.0
 
@@ -2399,13 +2399,6 @@ packages:
       react: 18.2.0
     dev: true
 
-  /@testing-library/user-event/14.4.3:
-    resolution: {integrity: sha512-kCUc5MEwaEMakkO5x7aoD+DLi02ehmEM2QCGWvNqAS1dV/fAvORWEjnjsEIvml59M7Y5kCkWN6fCCyPOe8OL6Q==}
-    engines: {node: '>=12', npm: '>=6'}
-    peerDependencies:
-      '@testing-library/dom': '>=7.21.4'
-    dev: false
-
   /@tootallnate/once/1.1.2:
     resolution: {integrity: sha512-RbzJvlNzmRq5c3O09UipeuXno4tA1FE6ikOjxZK0tuxVv3412l64l5t1W5pj4+rJq9vpkm/kwiR07aZXnsKPxw==}
     engines: {node: '>= 6'}
@@ -3617,8 +3610,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /antd/4.22.5_react@18.2.0:
-    resolution: {integrity: sha512-+qIEyzsenM9bllZHfE6ueZbI9EWulCIWeQhUeiIC6p8J2+M8w2tG2t6anbxxsOb5FnmML60ipVLL/rbm+oFKyw==}
+  /antd/4.22.7_react@18.2.0:
+    resolution: {integrity: sha512-CMf5tYHtlhP1blYjwNTRsB7G/bocwKmIFHgYYk4pZNgo1kk/XnPPI2/MKRCXWc54wuCQQlnmL/2AKtE7HWaE8g==}
     peerDependencies:
       react: '>=16.9.0'
       react-dom: '>=16.9.0'
@@ -3628,7 +3621,6 @@ packages:
       '@ant-design/react-slick': 0.29.2_react@18.2.0
       '@babel/runtime': 7.18.9
       '@ctrl/tinycolor': 3.4.1
-      '@testing-library/user-event': 14.4.3
       classnames: 2.3.1
       copy-to-clipboard: 3.3.2
       lodash: 4.17.21
@@ -3644,7 +3636,7 @@ packages:
       rc-image: 5.7.1_react@18.2.0
       rc-input: 0.0.1-alpha.7_react@18.2.0
       rc-input-number: 7.3.6_react@18.2.0
-      rc-mentions: 1.9.1_react@18.2.0
+      rc-mentions: 1.9.2_react@18.2.0
       rc-menu: 9.6.3_react@18.2.0
       rc-motion: 2.6.2_react@18.2.0
       rc-notification: 4.6.0_react@18.2.0
@@ -3663,14 +3655,12 @@ packages:
       rc-textarea: 0.3.7_react@18.2.0
       rc-tooltip: 5.2.2_react@18.2.0
       rc-tree: 5.6.6_react@18.2.0
-      rc-tree-select: 5.4.0_react@18.2.0
+      rc-tree-select: 5.4.1_react@18.2.0
       rc-trigger: 5.3.1_react@18.2.0
       rc-upload: 4.3.4_react@18.2.0
       rc-util: 5.23.0_react@18.2.0
       react: 18.2.0
       scroll-into-view-if-needed: 2.2.29
-    transitivePeerDependencies:
-      - '@testing-library/dom'
     dev: false
 
   /anymatch/2.0.0:
@@ -5090,8 +5080,8 @@ packages:
       mimer: 1.1.0
     dev: true
 
-  /date-fns/2.29.1:
-    resolution: {integrity: sha512-dlLD5rKaKxpFdnjrs+5azHDFOPEu4ANy/LTh04A1DTzMM7qoajmKCBc8pkKRFT41CNzw+4gQh79X5C+Jq27HAw==}
+  /date-fns/2.29.2:
+    resolution: {integrity: sha512-0VNbwmWJDS/G3ySwFSJA3ayhbURMTJLtwM2DTxf9CWondCnh6DTNlO9JgRSq6ibf4eD0lfMJNBxUdEAHHix+bA==}
     engines: {node: '>=0.11'}
     dev: false
 
@@ -11503,8 +11493,8 @@ packages:
       react: 18.2.0
     dev: false
 
-  /rc-mentions/1.9.1_react@18.2.0:
-    resolution: {integrity: sha512-6VBaEkJjYdGGxAygQvE2NaIegAzLJSDodgzpoV+vonUUCZ4A/d8izVlc2JqCYa0Yi15HiDcWyfRgJYI7OKTILg==}
+  /rc-mentions/1.9.2_react@18.2.0:
+    resolution: {integrity: sha512-uxb/lzNnEGmvraKWNGE6KXMVXvt8RQv9XW8R0Dqi3hYsyPiAZeHRCHQKdLARuk5YBhFhZ6ga55D/8XuY367g3g==}
     peerDependencies:
       react: '>=16.9.0'
       react-dom: '>=16.9.0'
@@ -11590,7 +11580,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.18.9
       classnames: 2.3.1
-      date-fns: 2.29.1
+      date-fns: 2.29.2
       dayjs: 1.11.5
       moment: 2.29.4
       rc-trigger: 5.3.1_react@18.2.0
@@ -11761,8 +11751,8 @@ packages:
       react: 18.2.0
     dev: false
 
-  /rc-tree-select/5.4.0_react@18.2.0:
-    resolution: {integrity: sha512-reRbOqC7Ic/nQocJAJeCl4n6nJUY3NoqiwRXKvhjgZJU7NGr9vIccXEsY+Lghkw5UMpPoxGsIJB0jiAvM18XYA==}
+  /rc-tree-select/5.4.1_react@18.2.0:
+    resolution: {integrity: sha512-xhXnKP8Stu2Q7wTcjJaSzSOLd4wmFtUZOwmy1cioaWyPbpiKlYdnALXA/9U49HOaV3KFXdRHE9Yi0KYED7yOAQ==}
     peerDependencies:
       react: '*'
       react-dom: '*'
@@ -13753,6 +13743,7 @@ packages:
   /unified/8.4.2:
     resolution: {integrity: sha512-JCrmN13jI4+h9UAyKEoGcDZV+i1E7BLFuG7OsaDvTXI5P0qhHX+vZO/kOhz9jn8HGENDKbwSeB0nVOg4gVStGA==}
     dependencies:
+      '@types/unist': 2.0.6
       bail: 1.0.5
       extend: 3.0.2
       is-plain-obj: 2.1.0
@@ -13763,6 +13754,7 @@ packages:
   /unified/9.2.2:
     resolution: {integrity: sha512-Sg7j110mtefBD+qunSLO1lqOEKdrwBFBrR6Qd8f4uwkhWNlbkaqwHse6e7QvD3AP/MNoJdEDLaf8OxYyoWgorQ==}
     dependencies:
+      '@types/unist': 2.0.6
       bail: 1.0.5
       extend: 3.0.2
       is-buffer: 2.0.5

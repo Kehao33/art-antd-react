@@ -16,7 +16,7 @@ nav:
 
 ### 基本使用
 
-<code src="../../src/demos/ListTemplateDemo1.tsx"  title="简单的使用">
+<code src="../demos/ListTemplateDemo1.tsx"  title="简单的使用">
 
 ## API
 

@@ -12,12 +12,10 @@
 - 快速使用 antd 搭建一个 react demo（无需配置），开箱即用 antd 组件
 
 ### Description
-
-从 1.1.0 到 以后的版本，antd 只要是无痛升级，本 library 也是无痛升级
-
 #### 当前可供用的组件
 
 - DetailPresent 详情呈现，配置化展示详情信息
+- MutModal 常见的 Form 表单操作，自动处理 loading， loading 结束后才关闭modal
 - FormItemsBuilder 表单项构建器，快速生成表单项
 - DetailPresent 详情呈现，快速的展示出想展示的信息
 - FormGenerator 表单生成器，在表单项构建构造器的基础上封装了 提交，重置，折叠等功能
@@ -51,8 +49,10 @@ github:
 npm i art-antd-react
 # or
 yarn add art-antd-react
+# yet
+pnpm i art-antd-react
 
-# 在入口引入以下文件(这是antd的默认主题样式，如果要引入其他主题样式可以在项目中按照 https://ant-design.gitee.io/docs/react/use-with-create-react-app-cn 覆盖即可) 
+# 在入口引入以下文件(这是antd的默认主题样式，如果要引入其他主题样式可以在项目中按照 https://ant-design.gitee.io/docs/react/use-with-create-react-app-cn 覆盖即可)
 # 当样式丢失的时候 引入如下样式
 import "art-antd-react/dist/esm/styles/defaultAntdCss.css"
 

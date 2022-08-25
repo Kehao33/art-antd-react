@@ -18,7 +18,7 @@ nav:
 
 ### 基本使用
 
-<code src="../../src/demos/UseRequestDemo1.tsx"  title="简单的使用">
+<code src="../demos/UseRequestDemo1.tsx"  title="简单的使用">
 
 ### Result
 

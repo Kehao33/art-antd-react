@@ -14,15 +14,15 @@ FormItemsBuilder 的目的是使用配置化的思想来帮助我们快速的生
 
 ### 基本使用
 
-<code src="../../src/demos/FormItemsBuilderDemo1.tsx"  title="使用TS as 断言可以帮助我们检查 formItemChildProps 的 API 是否正确">
+<code src="../demos/FormItemsBuilderDemo1.tsx"  title="使用TS as 断言可以帮助我们检查 formItemChildProps 的 API 是否正确">
 
 ### 自定义布局和其他标签的使用
 
-<code src="../../src/demos/FormItemsBuilderDemo2.tsx"  title="itemColProps 优先级高于 colProps">
+<code src="../demos/FormItemsBuilderDemo2.tsx"  title="itemColProps 优先级高于 colProps">
 
 ### 垂直布局
 
-<code src="../../src/demos/FormItemsBuilderDemo3.tsx"  title="itemColProps 优先级高于 colProps">
+<code src="../demos/FormItemsBuilderDemo3.tsx"  title="itemColProps 优先级高于 colProps">
 
 ## API
 

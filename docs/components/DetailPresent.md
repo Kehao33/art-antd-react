@@ -16,11 +16,11 @@ nav:
 
 ### 基本使用
 
-<code src="../../src/demos/DetailPresentDemo1.tsx"  title="根据获取的信息，配置上label的映射即可快速显示">
+<code src="../demos/DetailPresentDemo1.tsx"  title="根据获取的信息，配置上label的映射即可快速显示">
 
 ### 自定义某个项的 布局
 
-<code src="../../src/demos/DetailPresentDemo2.tsx"  title="使用 keyMapItemProps 来映射某项布局">
+<code src="../demos/DetailPresentDemo2.tsx"  title="使用 keyMapItemProps 来映射某项布局">
 
 ## API
 

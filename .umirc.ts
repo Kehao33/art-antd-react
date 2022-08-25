@@ -33,6 +33,10 @@ export default defineConfig({
       path: '/hooks',
     },
     {
+      title: 'changelog',
+      path: '/changelog',
+    },
+    {
       title: 'Gitee',
       path: 'https://gitee.com/quankehao/art-antd-react',
     },
