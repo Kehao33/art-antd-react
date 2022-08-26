@@ -20,7 +20,7 @@ specifiers:
 
 dependencies:
   antd: 4.22.5_react@18.2.0
-  art-antd-react: 1.8.6
+  art-antd-react: 'link:'
   babel-plugin-import: 1.13.5
   react: 18.2.0
 
@@ -3773,17 +3773,6 @@ packages:
     resolution: {integrity: sha512-3CYzex9M9FGQjCGMGyi6/31c8GJbgb0qGyrx5HWxPd0aCwh4cB2YjMb2Xf9UuoogrMrlO9cTqnB5rI5GHZTcUA==}
     engines: {node: '>=0.10.0'}
     dev: true
-
-  /art-antd-react/1.8.6:
-    resolution: {integrity: sha512-pzM+Cw1gWp6G1jxiMix4OMrTzarcFiZcQ8O1SrKKjqFJ4c0Gu37LJyKRSEDQeZ8G8I8KN9bJRzGDAbDG82YnYQ==}
-    dependencies:
-      antd: 4.22.5_react@18.2.0
-      babel-plugin-import: 1.13.5
-      react: 18.2.0
-    transitivePeerDependencies:
-      - '@testing-library/dom'
-      - react-dom
-    dev: false
 
   /asn1.js/5.4.1:
     resolution: {integrity: sha512-+I//4cYPccV8LdmBLiX8CYvf9Sp3vQsrqu2QNXRcrbiWvcx/UdlFiqUJJzxRQxgsZmvhXhn4cSKeSmoFjVdupA==}
