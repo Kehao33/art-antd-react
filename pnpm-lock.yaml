@@ -8,7 +8,6 @@ specifiers:
   '@umijs/fabric': ^2.8.1
   '@umijs/test': ^3.0.5
   antd: ^4.22.4
-  art-antd-react: ^1.8.6
   babel-plugin-import: ^1.13.5
   dumi: ^1.1.47
   father: ^4.0.0-rc.2
@@ -20,7 +19,6 @@ specifiers:
 
 dependencies:
   antd: 4.22.5_react@18.2.0
-  art-antd-react: 'link:'
   babel-plugin-import: 1.13.5
   react: 18.2.0
 
