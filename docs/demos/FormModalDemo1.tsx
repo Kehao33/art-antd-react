@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Form, message } from 'antd';
-import { FormItemConfig, FormGenerator, RenderType, MutModal } from 'art-antd-react';
+import { FormItemConfig, FormGenerator, RenderType, FormModal } from 'art-antd-react';
 //  安裝了 art-antd-react 以后 antd 直接导出的 类型或组件 可以直接从 art-antd-react 中导出
 // import { FormItemConfig, RenderType, useFormModal, Button, message } from 'art-antd-react';
 
@@ -81,7 +81,7 @@ const MutModalDemo1 = () => {
       >
         编辑信息
       </Button>
-      <MutModal
+      <FormModal
         visible={visible} // 决定了是否出现弹框
         title="编辑个人信息"
         form={form}
@@ -110,7 +110,7 @@ const MutModalDemo1 = () => {
         }}
       >
         <FormGenerator form={form} colProps={{ span: 24 }} formItemsConfig={formItemsConfig} />
-      </MutModal>
+      </FormModal>
     </>
   );
 };

@@ -1,5 +1,6 @@
 import { Button, message } from 'antd';
 import { useRequest } from 'art-antd-react';
+import React from 'react';
 //  安裝了 art-antd-react 以后 antd 直接导出的 类型或组件 可以直接从 art-antd-react 中导出
 // import { useRequest, Button, message } from 'art-antd-react';
 
@@ -7,7 +8,10 @@ import { useRequest } from 'art-antd-react';
 import { getData, MockData } from './mock';
 
 const RequestHookDemo = () => {
-  const { data, loading, lazyService } = useRequest<MockData[]>(getData, {
+  const { data, loading, lazyService } = useRequest<{
+    result: MockData[];
+    total: number;
+  }>(getData, {
     lazy: true, // lazy 为 true 的时候需要手动去调用 lazyService(xx)
     onError(e: Error) {
       message.error(e?.message || '请求出错');
@@ -15,7 +19,8 @@ const RequestHookDemo = () => {
   });
 
   if (data) {
-    console.log('请求的数据:', JSON.stringify(data, null, 2));
+    const { result } = data;
+    console.log('请求的数据:', JSON.stringify(result, null, 2));
   }
 
   return (

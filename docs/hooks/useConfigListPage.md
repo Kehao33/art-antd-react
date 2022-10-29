@@ -18,6 +18,10 @@ nav:
 
 ### 基本使用
 
+#### 说明
+
+如果 返回的数据不是 { dataSource?: unkown[]; total?: number } 格式，需要使用 `formaResult` 格式化并返回正确的格式( { dataSource?: unkown[]; total?: number; } )
+
 <code src="../demos/UseConfigListPageDemo1.tsx"  title="使用demo">
 
 ### Result 返回的结果
@@ -35,6 +39,7 @@ nav:
 | 参数 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
 | queryListService | 请求列表的方法 | `RequestService<Param, Res>` | - |
+| formaResult | 对请求返回的数据进行格式化并返回 { dataSource: unkown[]; total?:number; } 类型 | `formaResult: (res: any) => { dataSource: unkown[]； total?:number }` | - |
 | formatSubmitValue | 查询列表时对搜索表单的数据进行格式化，没有此参数时不进行格式化操作 | `(formValue: Param) => unknown` | - |
 | formItemsConfig | 搜索表单项的配置 | [FormItemsConfig API](/components/form-items-builder#formitemconfig-api)[] | [] |
 | lazy | <ul><li> 默认 `false`。 即在初始化时自动执行 service。</li><li>如果设置为 `true`，则需要手动调用 `lazyService` 触发执行。 </li></ul> | `boolean` | `false` |

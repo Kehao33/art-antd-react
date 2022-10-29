@@ -103,6 +103,18 @@ const Demo1 = () => {
         },
       },
     },
+    formaResult(res: { result: MockData[]; total: number }) {
+      const { total, result } = res;
+      /**
+       * @desc
+       * 因为渲染的是 表格，所以需要严格的 将返回的数据格式化为 { dataSource: any[]; total: number }
+       * dataSource 将会作为 antd 的 Table 的 dataSource 值, total 用作分页使用
+       */
+      return {
+        total,
+        dataSource: result,
+      };
+    },
   });
 
   managerRef.current = {
