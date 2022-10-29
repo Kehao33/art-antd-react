@@ -78,12 +78,20 @@ const Demo1 = () => {
       },
     }));
 
-  const { data: dataSource, loading } = useRequest(getData, {
-    onError(e) {
+  const { data, loading } = useRequest(getData, {
+    onError(e: Error) {
       message.error(e?.message || '请求出错');
     },
-  });
+    formaResult(res: { result: MockData[]; total: number }) {
+      const { result: dataSource, ...rest } = res || {};
 
+      return {
+        ...rest,
+        dataSource,
+      };
+    },
+  });
+  const { dataSource, total } = data || {};
   return (
     <ListTemplate
       // space 的配置
@@ -100,6 +108,7 @@ const Demo1 = () => {
           onChange(page: number, pageSize: number) {
             console.log(`change pagination: pageNo = ${page}, pageSize = ${pageSize}`);
           },
+          total,
         },
       }}
       // 包裹 Table 的 Card 的配置
@@ -123,7 +132,7 @@ const Demo1 = () => {
         colProps: { span: 8 },
         showSubmit: true, // 默认展示的
         showRest: true, // 默认展示的
-        onFinish: (v) => {
+        onFinish: (v: any) => {
           console.log('点击了提交', v);
         },
         onReset: () => {

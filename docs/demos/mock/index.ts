@@ -12,20 +12,26 @@ export type MockData = {
 };
 
 export type MockConfig = {
-  len?: number;
+  total?: number;
   timeout?: number;
   throwErr?: boolean;
 };
-export const getData = async (config?: MockConfig): Promise<MockData[]> => {
-  const { len = 21, timeout = 1500, throwErr = false } = config || {};
+
+export const getData = async (
+  config?: MockConfig,
+): Promise<{
+  result: MockData[];
+  total: number;
+}> => {
+  const { total = 100, timeout = 1500, throwErr = false } = config || {};
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (throwErr) {
         reject('出错啦');
       }
 
-      resolve(
-        Array(len)
+      resolve({
+        result: Array(total)
           .fill({})
           .map((_, index) => ({
             id: `${index + Math.floor(Math.random() * 100)}`,
@@ -40,7 +46,8 @@ export const getData = async (config?: MockConfig): Promise<MockData[]> => {
               age: Math.floor(Math.random() * 100),
             },
           })),
-      );
+        total,
+      });
     }, timeout);
   });
 };

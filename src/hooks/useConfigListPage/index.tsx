@@ -5,11 +5,12 @@ import { FormItemConfig } from '../../FormItemsBuilder';
 import { ListTemplate, ListTemplateProps } from '../../ListTemplate';
 import { OptionConfig, RequestService, useRequest } from '../useRequest';
 
-export interface ConfigListPageParameter<Param, Res>
+export interface ConfigListPageParameter<Res, Param>
   extends Omit<ListTemplateProps, 'searchBarProps'>,
     OptionConfig<Param, Res> {
   queryListService: RequestService<Param, Res>;
   formatSubmitValue?: (formValue: Param) => unknown;
+  formaResult: (res: any) => Res;
   // 搜索表单的配置项
   formItemsConfig?: FormItemConfig[];
   // 操作栏的的 col 布局， 和 antd 的 Col API 相同，优先级高于 colProps
@@ -20,7 +21,10 @@ export interface ConfigListPageParameter<Param, Res>
   rowProps?: RowProps;
 }
 
-export const useConfigListPage = <Param, Res extends Record<string, unknown>[]>({
+export const useConfigListPage = <
+  Res extends { dataSource?: any[]; total?: number } = { dataSource?: any[]; total?: number },
+  Param = any,
+>({
   queryListService,
   formatSubmitValue,
   onSuccess,
@@ -34,10 +38,10 @@ export const useConfigListPage = <Param, Res extends Record<string, unknown>[]>(
   actionColProps,
   colProps,
   rowProps,
-}: ConfigListPageParameter<Param, Res>) => {
+}: ConfigListPageParameter<Res, Param>) => {
   const {
     loading,
-    data: dataSource,
+    data,
     lazyService: queryList,
     ...rest
   } = useRequest(queryListService, {
@@ -55,13 +59,20 @@ export const useConfigListPage = <Param, Res extends Record<string, unknown>[]>(
     formaResult,
   });
 
+  const { dataSource, total } = (data || {}) as { dataSource: Res; total: number };
+  const list = dataSource && Array.isArray(dataSource) ? dataSource : [];
+
   const listContainer = useMemo(() => {
     return (
       <ListTemplate
         tableProps={{
           ...tableProps,
           loading,
-          dataSource,
+          dataSource: list,
+          pagination: {
+            total,
+            ...(tableProps?.pagination || {}),
+          },
         }}
         tableCardProps={tableCardProps}
         spaceProps={spaceProps}
@@ -82,8 +93,9 @@ export const useConfigListPage = <Param, Res extends Record<string, unknown>[]>(
   }, [spaceProps, tableProps, tableCardProps, formItemsConfig]);
 
   return {
+    total,
     loading,
-    dataSource,
+    dataSource: list,
     queryList,
     ...rest,
     listContainer,

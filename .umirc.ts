@@ -33,8 +33,8 @@ export default defineConfig({
       path: '/hooks',
     },
     {
-      title: 'changelog',
-      path: '/changelog',
+      title: 'about',
+      path: '/about',
     },
     {
       title: 'Gitee',

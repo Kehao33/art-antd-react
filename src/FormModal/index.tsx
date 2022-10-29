@@ -11,7 +11,7 @@ interface FormModalConfig<Value, Res> extends Omit<ModalProps, 'onError' | 'onOk
   form: FormInstance;
 }
 
-export const MutModal = <Value, Res>({
+export const FormModal = <Value, Res>({
   serviceFn,
   formatSubmitValue,
   onSuccess,
