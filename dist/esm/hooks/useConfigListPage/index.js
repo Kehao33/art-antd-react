@@ -47,15 +47,23 @@ export var useConfigListPage = function useConfigListPage(_ref) {
     formaResult: formaResult
   }),
       loading = _useRequest.loading,
-      dataSource = _useRequest.data,
+      data = _useRequest.data,
       queryList = _useRequest.lazyService,
       rest = _objectWithoutProperties(_useRequest, _excluded);
 
+  var _ref2 = data || {},
+      dataSource = _ref2.dataSource,
+      total = _ref2.total;
+
+  var list = dataSource && Array.isArray(dataSource) ? dataSource : [];
   var listContainer = useMemo(function () {
     return /*#__PURE__*/_jsx(ListTemplate, {
       tableProps: _objectSpread(_objectSpread({}, tableProps), {}, {
         loading: loading,
-        dataSource: dataSource
+        dataSource: list,
+        pagination: _objectSpread({
+          total: total
+        }, (tableProps === null || tableProps === void 0 ? void 0 : tableProps.pagination) || {})
       }),
       tableCardProps: tableCardProps,
       spaceProps: spaceProps,
@@ -74,8 +82,9 @@ export var useConfigListPage = function useConfigListPage(_ref) {
     });
   }, [spaceProps, tableProps, tableCardProps, formItemsConfig]);
   return _objectSpread(_objectSpread({
+    total: total,
     loading: loading,
-    dataSource: dataSource,
+    dataSource: list,
     queryList: queryList
   }, rest), {}, {
     listContainer: listContainer
